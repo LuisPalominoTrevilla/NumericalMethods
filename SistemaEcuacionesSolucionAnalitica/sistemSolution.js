@@ -18,7 +18,7 @@ function sistemSolver(a, b, c, d, e, f, g, h, m, n, p, q){
     let mem2 = e*n-m*f;
     var x3 = (mem1*(q*e-m*h) - mem2*(h*a-d*e)) / (mem1*(e*p-m*g) - mem2*(a*g-e*c));
     x3 = x3.toFixed(4);
-    var x2 = (h/e - d/a - (g/e - c/a)*x3)/(f/e - b/a);
+    var x2 = (a*h-e*d-(g*a-c*e)*x3)/(f*a-e*b);
     x2 = x2.toFixed(4);
     var x1 = h/e - (f/e)*x2 - (g/e)*x3;
     x1 = x1.toFixed(4);
