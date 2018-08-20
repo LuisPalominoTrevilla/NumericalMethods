@@ -39,7 +39,6 @@ int main() {
 	cout << "\t \t \tn = 1,000,000: " << setprecision(10) << getEulerNormal(1000000) << endl;
 	cout << "\t \t \tn = 10,000,000: " << setprecision(10) << getEulerNormal(10000000) << endl;
 	cout << "\t \t \tn = 100,000,000: " << setprecision(10) << getEulerNormal(100000000) << endl;
-	cout << "\t \t \tn = 1,000,000,000,000: " << setprecision(10) << getEulerNormal(1000000000000) << endl;
 	cout << endl;
 	// Probar calcular aproximación de número euler dada una tolerancia de error normalizado dado en %
 	cout << "Probar aproximacion de Euler dada una tolerancia de error normalizado en %" << endl;
