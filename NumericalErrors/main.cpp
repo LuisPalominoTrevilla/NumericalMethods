@@ -104,8 +104,7 @@ double getPIPrecision(double tolerance) {
 	Get Euler methods
 */
 double getEulerNormal(int n) {
-	double euler = pow(1 + 1.0/n, n);
-	return euler;
+	return (n == 0)? 0.0: pow(1 + 1.0 / n, n);
 }
 
 double getEulerPrecision(double tolerance) {
