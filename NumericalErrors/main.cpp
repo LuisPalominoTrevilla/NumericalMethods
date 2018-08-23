@@ -17,7 +17,7 @@ double getEulerPrecision(double);
 int main() {
 	/* Probar primeras 3 funciones
 		considerando que el valor verdadero de pi es 3.146*/
-	cout << "Probar primeras 3 funciones considerando que el valor verdadero de pi es 3.146\n" << endl;
+	cout << "Probar primeras 3 funciones considerando que el valor verdadero de pi es 3.1416\n" << endl;
 	double piVerd = 3.1416;
 	// Probar error absoluto con 5 términos de la serie:
 	cout << "Error Absoluto con n = 5 es: " << getAbsoluteError(piVerd, getPINormal(5)) << endl;
@@ -28,7 +28,7 @@ int main() {
 	cout << "\n" << endl;
 	/* Probar últimas 2 funciones
 		Para calcular el número Euler*/
-	cout << "Probar las ultimas 2 funciones para calcular el número Euler\n" << endl;
+	cout << "Probar las ultimas 2 funciones para calcular el numero Euler\n" << endl;
 	// Probar calcular aproximación de número euler en términos de n. Se asume que n > 0
 	cout << "Probar aproximacion de Euler en terminos de un numero n" << endl;
 	cout << "Probar cuando\t\tn = 10: " << setprecision(10) << getEulerNormal(10) << endl;
@@ -54,19 +54,29 @@ int main() {
 	return 0;
 }
 
+/**
+	Methods to calculate errors
+*/
+
 double getAbsoluteError(double realValue, double aproxValue) {
 	return abs(realValue - aproxValue);
 }
 
 double getRelativeError(double realValue, double aproxValue) {
-	if (realValue == 0) return 0;
+	double epsilon = 1e-7;
+	if (abs(realValue) <= epsilon) return -1;
 	return abs((realValue - aproxValue) / realValue);
 }
 
 double getNormalizedError(double currentValue, double oldValue) {
-	if (currentValue == 0) return -1;
+	double epsilon = 1e-7;
+	if (abs(currentValue) <= epsilon) return -1;
 	return abs((currentValue - oldValue) / currentValue);
 }
+
+/**
+	Get Pi methods
+*/
 
 double getPINormal(int n) {
 	double pi = 0.0;
@@ -83,11 +93,16 @@ double getPIPrecision(double tolerance) {
 		sum += 1.0 / pow(n++, 2);
 		currentVal = sqrtl(sum * 6);
 		normalizedError = getNormalizedError(currentVal, oldVal);
+		cout << normalizedError << endl;
 		oldVal = currentVal;
 	} while (normalizedError > tolerance / 100.0);
 	return currentVal;
 }
 
+
+/**
+	Get Euler methods
+*/
 double getEulerNormal(int n) {
 	double euler = pow(1 + 1.0/n, n);
 	return euler;
