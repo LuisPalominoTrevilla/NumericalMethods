@@ -21,9 +21,15 @@
     <ClCompile Include="sum.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="poly.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sum.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="poly.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

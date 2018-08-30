@@ -3,8 +3,6 @@
 
 using namespace std;
 
-int sum(int a, int b);
-
 string polinomialToString(int, int*);
 
 float evaluate(int n, int* polynomial, float val);

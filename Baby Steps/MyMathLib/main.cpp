@@ -1,5 +1,6 @@
 #include <iostream>
 #include "sum.h"
+#include "poly.h"
 
 using namespace std;
 

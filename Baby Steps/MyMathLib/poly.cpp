@@ -1,12 +1,7 @@
-#include "sum.h"
+#include "poly.h"
 #include <string>
-#include <cmath>
 
 using namespace std;
-
-int sum(int a, int b) {
-	return a + b;
-}
 
 string polinomialToString(int n, int* polynomial) {
 	string a = "";
@@ -14,7 +9,7 @@ string polinomialToString(int n, int* polynomial) {
 		if (polynomial[i] == 0) {
 			continue;
 		}
-		a += ((polynomial[i] > 0 && i != 0)? "+":"") + ((polynomial[i] == 1 && i > 0)? "": to_string(polynomial[i])) + ((i == 0)? "":(i == 1)? "x":("x^" + to_string(i)));
+		a += ((polynomial[i] > 0 && i != 0) ? "+" : "") + ((polynomial[i] == 1 && i > 0) ? "" : to_string(polynomial[i])) + ((i == 0) ? "" : (i == 1) ? "x" : ("x^" + to_string(i)));
 	}
 	return a;
 }
