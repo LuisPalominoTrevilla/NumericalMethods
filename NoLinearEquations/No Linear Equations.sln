@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Synthetic Division", "Synth
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Synthetic Div OO", "Synthetic Div OO\Synthetic Div OO.vcxproj", "{AB489BED-A735-40CC-AA6B-FC0E5D871FAF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NetwonRaphsonOO", "NetwonRaphsonOO\NetwonRaphsonOO.vcxproj", "{4C3F3953-2BD6-4746-9E7B-C65F705B2E5F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{AB489BED-A735-40CC-AA6B-FC0E5D871FAF}.Release|x64.Build.0 = Release|x64
 		{AB489BED-A735-40CC-AA6B-FC0E5D871FAF}.Release|x86.ActiveCfg = Release|Win32
 		{AB489BED-A735-40CC-AA6B-FC0E5D871FAF}.Release|x86.Build.0 = Release|Win32
+		{4C3F3953-2BD6-4746-9E7B-C65F705B2E5F}.Debug|x64.ActiveCfg = Debug|x64
+		{4C3F3953-2BD6-4746-9E7B-C65F705B2E5F}.Debug|x64.Build.0 = Debug|x64
+		{4C3F3953-2BD6-4746-9E7B-C65F705B2E5F}.Debug|x86.ActiveCfg = Debug|Win32
+		{4C3F3953-2BD6-4746-9E7B-C65F705B2E5F}.Debug|x86.Build.0 = Debug|Win32
+		{4C3F3953-2BD6-4746-9E7B-C65F705B2E5F}.Release|x64.ActiveCfg = Release|x64
+		{4C3F3953-2BD6-4746-9E7B-C65F705B2E5F}.Release|x64.Build.0 = Release|x64
+		{4C3F3953-2BD6-4746-9E7B-C65F705B2E5F}.Release|x86.ActiveCfg = Release|Win32
+		{4C3F3953-2BD6-4746-9E7B-C65F705B2E5F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
