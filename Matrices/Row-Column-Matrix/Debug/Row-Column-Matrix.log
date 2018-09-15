@@ -1,0 +1,4 @@
+﻿  main.cpp
+e:\tec\quinto semestre\métodos numéricos\algoritms\matrices\row-column-matrix\main.cpp(26): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+e:\tec\quinto semestre\métodos numéricos\algoritms\matrices\row-column-matrix\main.cpp(87): warning C4101: 'j': unreferenced local variable
+  Row-Column-Matrix.vcxproj -> E:\TEC\Quinto Semestre\Métodos Numéricos\Algoritms\Matrices\Debug\Row-Major-Matrix.exe
