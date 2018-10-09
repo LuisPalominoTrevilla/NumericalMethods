@@ -9,10 +9,10 @@ public:
 	int getNumerator();
 	int getDenominator();
 	friend ostream& operator<<(ostream& os, const Rational & rat);
-	Rational operator+(const Rational&rat);
-	Rational operator-(const Rational&rat);
-	Rational operator*(const Rational&rat);
-	Rational operator/(const Rational&rat);
+	Rational* operator+(const Rational&rat);
+	Rational* operator-(const Rational&rat);
+	Rational* operator*(const Rational&rat);
+	Rational* operator/(const Rational&rat);
 private:
 	int numerator, denominator;
 	int gcd(int a, int b);

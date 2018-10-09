@@ -20,36 +20,35 @@ int Rational::getDenominator() {
 	return this->denominator;
 }
 
-Rational Rational::operator+(const Rational& rat) {
+Rational* Rational::operator+(const Rational& rat) {
 	int n = this->numerator*rat.denominator + rat.numerator*this->denominator;
 	int d = this->denominator*rat.denominator;
 	int a = this->gcd(n, d);
-	Rational r(n / a, d / a);
+	Rational *r = new Rational(n / a, d / a);
 	return r;
 }
 
-Rational Rational::operator-(const Rational& rat) {
+Rational* Rational::operator-(const Rational& rat) {
 	int n = this->numerator*rat.denominator - rat.numerator*this->denominator;
 	int d = this->denominator*rat.denominator;
 	int a = this->gcd(n, d);
-	Rational r(n / a, d / a);
+	Rational *r = new Rational(n / a, d / a);
 	return r;
 }
 
-Rational Rational::operator*(const Rational& rat) {
+Rational* Rational::operator*(const Rational& rat) {
 	int n = this->numerator * rat.numerator;
 	int d = this->denominator * rat.denominator;
 	int a = this->gcd(n, d);
-	cout << a << endl;
-	Rational r(n / a, d / a);
+	Rational *r = new Rational(n / a, d / a);
 	return r;
 }
 
-Rational Rational::operator/(const Rational& rat) {
+Rational* Rational::operator/(const Rational& rat) {
 	int n = this->numerator * rat.denominator;
 	int d = this->denominator * rat.numerator;
 	int a = this->gcd(n,d);
-	Rational r(n/a, d/a);
+	Rational *r = new Rational(n / a, d / a);
 	return r;
 }
 
