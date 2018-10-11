@@ -117,10 +117,12 @@
   <ItemGroup>
     <ClCompile Include="Complex.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Matrix.cpp" />
     <ClCompile Include="Rational.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Complex.h" />
+    <ClInclude Include="Matrix.h" />
     <ClInclude Include="Rational.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

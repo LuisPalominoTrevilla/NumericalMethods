@@ -1,66 +1,72 @@
 #include <iostream>
 #include "Complex.h"
-#include "Rational.h"
 
 using namespace std;
 
-Complex::Complex(int real1, int reald1, int i1, int id1) {
-	this->real = new Rational(real1, reald1);
-	this->imaginary = new Rational(i1, id1);
+Complex::Complex() {
+	this->real = 1.0;
+	this->imaginary = 1.0;
 }
 
-Complex::Complex(int real1, int i1) {
-	this->real = new Rational(real1);
-	this->imaginary = new Rational(i1);
+Complex::Complex(double unique) {
+	this->real = unique;
+	this->imaginary = unique;
 }
 
-Complex::Complex(Rational *real, Rational *imag) {
+Complex::Complex(double real, double imag) {
 	this->real = real;
 	this->imaginary = imag;
 }
 
-Rational Complex::getReal() {
-	return *this->real;
+double Complex::getReal() {
+	return this->real;
 }
 
-Rational Complex::getImaginary() {
-	return *this->imaginary;
+double Complex::getImaginary() {
+	return this->imaginary;
 }
 
-Complex* Complex::operator+(const Complex&cmp) {
-	Rational *real = *this->real + *cmp.real;
-	Rational *imag = *this->imaginary + *cmp.imaginary;
-	Complex *cm = new Complex(real, imag);
+Complex Complex::operator+(const Complex&cmp) {
+	double real = this->real + cmp.real;
+	double imag = this->imaginary + cmp.imaginary;
+	Complex cm(real, imag);
 	return cm;
 }
 
-Complex* Complex::operator-(const Complex&cmp) {
-	Rational *real = *this->real - *cmp.real;
-	Rational *imag = *this->imaginary - *cmp.imaginary;
-	Complex *cm = new Complex(real, imag);
+Complex Complex::operator-(const Complex&cmp) {
+	double real = this->real - cmp.real;
+	double imag = this->imaginary - cmp.imaginary;
+	Complex cm(real, imag);
 	return cm;
 }
 
-Complex* Complex::operator*(const Complex&cmp) {
-	Rational *real = *this->real * *cmp.real;
-	Rational *imag = *this->imaginary * *cmp.imaginary;
-	Complex *cm = new Complex(real, imag);
+Complex Complex::operator*(const Complex&cmp) {
+	double real = this->real * cmp.real;
+	double imag = this->imaginary * cmp.imaginary;
+	Complex cm(real, imag);
 	return cm;
 }
 
-Complex* Complex::operator/(const Complex&cmp) {
-	Rational *real = *this->real / *cmp.real;
-	Rational *imag = *this->imaginary / *cmp.imaginary;
-	Complex *cm = new Complex(real, imag);
+Complex Complex::operator/(const Complex&cmp) {
+	double real = this->real / cmp.real;
+	double imag = this->imaginary / cmp.imaginary;
+	Complex cm(real, imag);
 	return cm;
+}
+
+bool Complex::operator>=(const Complex&cmp) {
+	return this->real >= cmp.real && this->imaginary >= cmp.imaginary;
+}
+
+bool Complex::operator<=(const Complex&cmp) {
+	return this->real <= cmp.real && this->imaginary <= cmp.imaginary;
+}
+
+bool Complex::isZero() {
+	return this->real <= 1.e-7 && this->imaginary <= 1.e-7;
 }
 
 ostream& operator<<(ostream& os, const Complex & cmp) {
-	os << *cmp.real << " + " << *cmp.imaginary << "i";
+	os << cmp.real << " + " << cmp.imaginary << "i";
 	return os;
-}
-
-Complex::~Complex() {
-	delete this->real;
-	delete this->imaginary;
 }
